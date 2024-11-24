@@ -17,3 +17,8 @@ buildNumber.properties
 .classpath
 
 .vscode/
+
+#env
+.env
+#db logs
+demo/infra/db/logs/
