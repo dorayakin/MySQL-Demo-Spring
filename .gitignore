@@ -15,3 +15,10 @@ buildNumber.properties
 .project
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
+
+.vscode/
+
+#env
+.env
+#db logs
+demo/infra/db/logs/

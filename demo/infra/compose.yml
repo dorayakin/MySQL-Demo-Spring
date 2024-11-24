@@ -1,0 +1,20 @@
+
+services:
+  db:
+    build: ./db
+    restart: always
+    container_name: mysql-container
+    ports:
+      - "${FORWARD_DB_PORT:-3306}:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: "${DB_PASSWORD}"
+      MYSQL_ROOT_HOST: "%"
+      MYSQL_DATABASE: "${DB_DATABASE}"
+      MYSQL_USER: "${DB_USER}"
+      MYSQL_PASSWORD: "${DB_PASSWORD}"
+    volumes:
+      - db_store:/var/lib/mysql
+      - ./db/logs:/var/log/mysql
+volumes:
+  db_store:
+  
