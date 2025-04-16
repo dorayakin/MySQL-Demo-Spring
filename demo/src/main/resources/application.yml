@@ -1,0 +1,36 @@
+# Conversion to YAML from Properties formar report
+# Warnings:
+# - The yaml file had comments which are lost in the refactoring!
+spring:
+  application:
+    name: demo
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:mysql://localhost:3306/mydatabase
+    username: myuser
+    password: mypassword
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+    properties:
+      hibernate:
+        connection:
+          allowLoadLocalInfile: true
+        type: trace
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    user: myuser
+    password: mypassword
+    url: jdbc:mysql://localhost:3306/mydatabase
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        orm:
+          jdbc:
+            bind: TRACE
+
+  port: 3000
