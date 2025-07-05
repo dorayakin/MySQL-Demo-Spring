@@ -52,9 +52,9 @@ RETURN data;
 
 END;
 //
-DELIMITER;
+DELIMITER ;
 
-LOAD DATA LOCAL INFILE 'src\\main\\resources\\db\\csv\\cities.csv' INTO TABLE city FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' (
+LOAD DATA LOCAL INFILE 'demo/src/main/resources/db/csv/cities.csv' INTO TABLE city FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' (
     @group_code,
     @prefecture,
     @city,
