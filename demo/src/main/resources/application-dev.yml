@@ -14,8 +14,6 @@ spring:
     show-sql: true
     properties:
       hibernate:
-        # connection:
-        #   allowLoadLocalInfile: true
         type: trace
   flyway:
     enabled: true

@@ -19,18 +19,19 @@ spring:
         connection:
           allowLoadLocalInfile: true
         type: trace
-  flyway:
-    enabled: true
-    locations: classpath:db/migration
-    user: myuser
-    password: mypassword
-    url: jdbc:mysql://localhost:3306/mydatabase
+  # flyway:
+  #   enabled: true
+  #   locations: classpath:db/migration
+  #   user: myuser
+  #   password: mypassword
+  #   url: jdbc:mysql://localhost:3306/mydatabase
   level:
     org:
       hibernate:
-        SQL: DEBUG
+        SQL: INFO
         orm:
           jdbc:
             bind: TRACE
 
   port: 3000
+#debug: true

@@ -18,6 +18,7 @@ buildNumber.properties
 
 .vscode/
 
+.idea
 #env
 .env
 #db logs
