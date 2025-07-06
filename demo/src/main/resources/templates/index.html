@@ -9,6 +9,9 @@
     <body>
         <h1>Welcome to the Demo Application</h1>
         <p>This is a simple Thymeleaf template example.</p>
+
+        <p th:text="'loginUser : ' + ${username}"></p>
+        <p th:text="'userRole : ' + ${userRole}"></p>
         <footer>
             <p>&copy; 2025 Demo Application</p>
         </footer>

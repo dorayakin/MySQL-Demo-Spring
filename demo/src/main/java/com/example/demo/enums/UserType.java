@@ -11,6 +11,24 @@ public enum UserType {
         this.label = label;
     }
 
+    public int getCode() {
+        return code;
+    }
+
+    public String getLabel() {
+        return label;
+    }
+
+    // コード値からUserTypeを取得するメソッド
+    public static UserType fromCode(int code) {
+        for (UserType userType : UserType.values()) {
+            if (userType.getCode() == code) {
+                return userType;
+            }
+        }
+        throw new IllegalArgumentException("Invalid UserType code: " + code);
+    }
+
     @Override
     public String toString() {
         return switch (this) {
